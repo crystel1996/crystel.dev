@@ -4,8 +4,28 @@ import classes from './style.module.css'
 import { Box, IconButton, List, ListItem, ListItemText, Typography } from '@mui/material';
 import { Menu } from '@mui/icons-material';
 import classNames from 'classnames';
+import { useNavigate } from 'react-router-dom';
+import { MenuItem, MenuItemComponentInterface } from '../MenuList';
 
 export const Header: FC<HeaderComponentInterface> = () => {
+
+    const navigate = useNavigate();
+
+    const handleRedirect = (tab: string) => {
+        navigate(`/${tab}`);
+    };
+
+    const handleShowMenu = () => {
+        
+    };
+
+    const MENUS: MenuItemComponentInterface[] = [
+        { onClick: handleRedirect, label: 'About', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Experiences', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Work', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Contact', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Download CV', classNameItem: classNames(classes.headerListMenuitem, classes.headerListMenuButton), classNameItemText: classes.headerListMenuitemText },
+    ];
 
     return <Box className={classes.header}>
         <Box className={classes.headerLogo}>
@@ -13,25 +33,13 @@ export const Header: FC<HeaderComponentInterface> = () => {
         </Box>
         <Box className={classes.headerMenu}>
             <List className={classes.headerListMenu}>
-                <ListItem className={classes.headerListMenuitem}>
-                    <ListItemText className={classes.headerListMenuitemText}>About</ListItemText>
-                </ListItem>
-                <ListItem className={classes.headerListMenuitem}>
-                    <ListItemText className={classes.headerListMenuitemText}>Experiences</ListItemText>
-                </ListItem>
-                <ListItem className={classes.headerListMenuitem}>
-                    <ListItemText className={classes.headerListMenuitemText}>Work</ListItemText>
-                </ListItem>
-                <ListItem className={classes.headerListMenuitem}>
-                    <ListItemText className={classes.headerListMenuitemText}>Contact</ListItemText>
-                </ListItem>
-                <ListItem className={classNames(classes.headerListMenuitem, classes.headerListMenuButton)}>
-                    <ListItemText className={classes.headerListMenuitemText} >Download CV</ListItemText>
-                </ListItem>
+                {MENUS.map((menu) => {
+                    return <MenuItem onClick={menu.onClick} label={menu.label} classNameItem={menu.classNameItem} classNameItemText={menu.classNameItemText} />
+                })}
             </List>
 
             <Box className={classes.headerMobileMenu}>
-                <IconButton size="large" aria-label="Menu">
+                <IconButton size="large" aria-label="Menu" onClick={handleShowMenu}>
                     <Menu fontSize='large' htmlColor='white' />
                 </IconButton>
             </Box>

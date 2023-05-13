@@ -21,7 +21,7 @@
 .headerListMenuitem {
     cursor: pointer;
     color:#F2F2F2;
-    width: auto
+    min-width: max-content;
 }
 
 .headerListMenuitem:hover {
