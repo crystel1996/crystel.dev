@@ -1,5 +1,4 @@
 import { ListItem, ListItemText } from '@mui/material';
-import classNames from 'classnames';
 import React, { FC } from 'react';
 import { MenuItemComponentInterface } from './interface';
 

@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react';
 import { HeaderComponentInterface } from './interface';
 import classes from './style.module.css'
-import { Box, Drawer, IconButton, List, ListItem, ListItemText, Typography } from '@mui/material';
-import { Menu } from '@mui/icons-material';
+import { Box, Drawer, IconButton, List, Typography } from '@mui/material';
+import { Close, Menu } from '@mui/icons-material';
 import classNames from 'classnames';
 import { useNavigate } from 'react-router-dom';
 import { MenuItem, MenuItemComponentInterface } from '../MenuList';
@@ -53,7 +53,16 @@ export const Header: FC<HeaderComponentInterface> = () => {
                             anchor="right"
                             open={anchorElMenuMobile}
                             onClose={handleCloseMenuMobile}
+                            classes={{ paper: classes.menuDrawer }}
                         >
+                            <Box className={classes.closeMenu} onClick={handleCloseMenuMobile}>
+                                <Box>
+                                    <Typography className={classes.titleMenuMobile}>Menu</Typography>
+                                </Box>
+                                <Box>
+                                    <Close />
+                                </Box>
+                            </Box>
                             {
                                 MENUS.map((menu) => {
                                     return <MenuItem onClick={menu.onClick} label={menu.label} classNameItem={menu.classNameItem} classNameItemText={menu.classNameItemText} />

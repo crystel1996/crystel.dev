@@ -40,10 +40,28 @@
     text-decoration: none;
 }
 
+.menuDrawer {
+    width: 35%;
+    background-color: #2a6877;
+}
+
+.closeMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255,255,255, 0.4);
+}
+
+.titleMenuMobile {
+    font-size: 1.5em;
+}
+
 @media only screen and (max-width: 992px) {
     .headerListMenuitem {
         cursor: pointer;
-        color: #2a6877;
+        color: #F2F2F2;
         min-width: max-content;
     }
 }
