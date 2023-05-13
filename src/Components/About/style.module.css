@@ -1,0 +1,28 @@
+.aboutSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%
+}
+
+.aboutImage {
+    padding: 25px;
+}
+
+.aboutImage img {
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+}
+
+.aboutText {
+    padding: 25px;
+}
+
+.aboutText p {
+    color: #F2F2F2;
+    font-size: 1.5em;
+    text-align: justify;
+}
