@@ -4,11 +4,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding: 15px;
 }
 
 .headerLogo {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
     cursor: pointer;
     color: #F2F2F2;
 }
@@ -37,4 +37,18 @@
 .headerListMenuButton:hover {
     background: #F2F2F2;
     color: #2a6877;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+    .headerMobileMenu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .headerListMenu {
+        display: none;
+    }
+
 }
