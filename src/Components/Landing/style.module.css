@@ -1,0 +1,80 @@
+.landingSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.landingDefinite {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    margin: auto;
+    height: 80vh
+}
+
+.landingTitle {
+    padding: 5px
+}
+
+.landingTitle h1 {
+    font-size: 5em;
+    color: #F2F2F2;
+}
+
+.landingSubtitle {
+    padding: 5px;
+}
+
+.landingSubtitle h2 {
+    color: #f2026e;
+    font-size: 2.5em;
+}
+
+.landingText {
+    padding: 5px;
+}
+
+.landingText p {
+    color: #bfbdbd;
+    font-size: 1.5em;
+}
+
+.landingButton {
+    padding: 5px;
+}
+
+.landingButton button  {
+    color: #F2F2F2;
+    background-color: #1f444d;
+    padding: 25px 15px;
+    min-width: 250px;
+    border: none;
+}
+
+.landingButton button:hover {
+    color: #F2F2F2;
+    background-color: #1f444d;
+    border: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .landingTitle h1 {
+        font-size: 3em;
+    }
+
+    .landingSubtitle h2 {
+        font-size: 2em;
+    }
+
+    .landingText p {
+        color: #bfbdbd;
+        font-size: 1em;
+    }
+
+    .landingButton button  {
+       
+        padding: 15px 5px;
+    }
+
+}
