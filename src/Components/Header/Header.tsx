@@ -27,6 +27,10 @@ export const Header: FC<HeaderComponentInterface> = () => {
         setAnchorElMenuMobile(false);
     };
 
+    const handleGoHome = () => {
+        navigate('/')
+    };
+
     const MENUS: MenuItemComponentInterface[] = [
         { onClick: handleRedirect, label: 'About', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
         { onClick: handleRedirect, label: 'Experiences', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
@@ -81,7 +85,7 @@ export const Header: FC<HeaderComponentInterface> = () => {
     }, [MENUS, MENU_MOBILE, isMobileDevice, anchorElMenuMobile]);
 
     return <Box className={classes.header}>
-        <Box className={classes.headerLogo}>
+        <Box className={classes.headerLogo} onClick={handleGoHome}>
             <Typography  className={classes.headerLogo}>CRYSTEL</Typography>
         </Box>
         <Box className={classes.headerMenu}>
