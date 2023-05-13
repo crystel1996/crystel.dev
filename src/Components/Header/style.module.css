@@ -41,8 +41,8 @@
 }
 
 .menuDrawer {
-    width: 35%;
-    background-color: #2a6877;
+    width: 35% !important;
+    background-color: #2a6877 !important;
 }
 
 .closeMenu {
