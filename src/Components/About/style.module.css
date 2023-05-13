@@ -26,3 +26,28 @@
     font-size: 1.5em;
     text-align: justify;
 }
+
+@media only screen and (max-width: 992px) {
+    .aboutSection {
+        padding: 5px; 
+        margin: 0;
+    }
+
+    .aboutImage {
+        padding: 5px;
+    }
+
+    .aboutImage img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .aboutText {
+        padding: 5px;
+    }
+
+    .aboutText p {
+        font-size: 1.2em;
+    }
+
+}
