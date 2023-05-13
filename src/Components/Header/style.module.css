@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.headerLogo {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #F2F2F2;
+}
+
+.headerListMenu {
+    display: flex;
+    flex-direction: row;
+}
+
+.headerListMenuitem {
+    cursor: pointer;
+    color:#F2F2F2;
+    width: auto
+}
+
+.headerListMenuitem:hover {
+    text-decoration: underline;
+}
+
+.headerListMenuButton {
+    border: 1px solid #F2F2F2;
+    border-radius: 5px;
+    min-width: max-content;
+}
+
+.headerListMenuButton:hover {
+    background: #F2F2F2;
+    color: #2a6877;
+}
