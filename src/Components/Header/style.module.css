@@ -40,15 +40,10 @@
     text-decoration: none;
 }
 
-@media screen and (min-width: 992px) {
-    .headerMobileMenu {
-        display: none;
+@media only screen and (max-width: 992px) {
+    .headerListMenuitem {
+        cursor: pointer;
+        color: #2a6877;
+        min-width: max-content;
     }
-}
-
-@media screen and (max-width: 992px) {
-    .headerListMenu {
-        display: none;
-    }
-
 }
