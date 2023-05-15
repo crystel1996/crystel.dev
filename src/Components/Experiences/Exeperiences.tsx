@@ -8,7 +8,7 @@ export const Experience: FC<ExperienceComponentInterface> = () => {
 
     return <Box className={classes.experienceContent}>
         <Box className={classes.experienceTitle}>
-            <Typography>Liste des technologies</Typography>
+            <Typography>List of technologies</Typography>
         </Box>
         <Box className={classes.experiecenceListTechno}>
             <Box className={classes.experienceLogo}>

@@ -37,7 +37,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .experiencesItem {
@@ -68,6 +68,11 @@
 }
 
 @media only screen and (max-width: 750px) {
+
+    .experiencesItem {
+        width: 100%;
+        margin: 25px 0;
+    }
 
     .experienceTitle p {
         font-size: 2.5em;
