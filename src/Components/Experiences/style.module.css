@@ -1,13 +1,27 @@
 .experienceContent {
     display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.experienceTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    color: #e0234e;
+}
+
+.experienceTitle p {
+    font-size: 3em;
+}
+
+.experiecenceListTechno {
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 5px;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 100px;
 }
 
 .experienceLogo {
@@ -15,10 +29,35 @@
 }
 
 .experienceLogo img {
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
 }
 
+.listExperiences {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.experiencesItem {
+    background: #e0234e;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.8);
+    min-width: 40%;
+}
+
+.experiencesTitle {
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2)
+}
+
+@media only screen and (max-width: 1200px) {
+    .experiencesItem {
+        min-width: 80%;
+        margin: 25px 0;
+    }
+}
 
 @media only screen and (max-width: 992px) {
     .experienceContent {
@@ -30,12 +69,8 @@
 
 @media only screen and (max-width: 750px) {
 
-    .experienceContent {
-        margin-top: 100px;
+    .experienceTitle p {
+        font-size: 2em;
     }
 
-    .experienceLogo img {
-        width: 75px;
-        height: 75px;
-    }
 }
