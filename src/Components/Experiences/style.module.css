@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     padding: 15px;
-    color: #e0234e;
+    color: #682333;
 }
 
 .experienceTitle p {
@@ -50,6 +50,12 @@
 .experiencesTitle {
     padding: 5px;
     border: 1px solid rgba(255, 255, 255, 0.2)
+}
+
+.experiencesLibelle {
+    text-decoration: underline;
+    margin-right: 2px;
+    color: rgba(255, 255, 255, 1);
 }
 
 @media only screen and (max-width: 1200px) {

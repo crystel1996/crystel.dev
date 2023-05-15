@@ -43,9 +43,9 @@ export const Experience: FC<ExperienceComponentInterface> = () => {
             <Box className={classes.experiencesItem}>
                 <Box className={classes.experiencesTitle}>
                     <Typography variant="h4">Developer ReactJS / NodeJS</Typography>
-                    <Typography>Date: December 2020 - Now</Typography>
-                    <Typography>Company: Digital4Win</Typography>
-                    <Typography>Techno: ReactJS, NodeJS, NestJs, Graphql, Git, Postgresql, js, css3</Typography>
+                    <Typography display="flex"><Typography className={classes.experiencesLibelle}>Date:</Typography> December 2020 - Now</Typography>
+                    <Typography display="flex"><Typography className={classes.experiencesLibelle}>Company:</Typography> Digital4Win</Typography>
+                    <Typography display="flex"><Typography className={classes.experiencesLibelle}>Techno:</Typography> ReactJS, NodeJS, NestJs, Graphql, Git, Postgresql, js, css3</Typography>
                 </Box>
                 <Box>
                     <List>
@@ -73,9 +73,9 @@ export const Experience: FC<ExperienceComponentInterface> = () => {
             <Box className={classes.experiencesItem}>
                 <Box className={classes.experiencesTitle}>
                     <Typography variant="h4">Developer PHP</Typography>
-                    <Typography>Date: December 2019 - Mars 2020</Typography>
-                    <Typography>Company: Nir'Info</Typography>
-                    <Typography>Techno: PHP, MySql, HTML/Css, Js</Typography>
+                    <Typography display="flex"><Typography className={classes.experiencesLibelle}>Date:</Typography> December 2019 - Mars 2020</Typography>
+                    <Typography display="flex"><Typography className={classes.experiencesLibelle}>Company:</Typography> Nir'Info</Typography>
+                    <Typography display="flex"><Typography className={classes.experiencesLibelle}>Techno:</Typography> PHP, MySql, HTML/Css, Js</Typography>
                 </Box>
                 <Box>
                     <List>
