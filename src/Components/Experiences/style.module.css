@@ -54,7 +54,7 @@
 
 @media only screen and (max-width: 1200px) {
     .experiencesItem {
-        min-width: 80%;
+        width: 80%;
         margin: 25px 0;
     }
 }
@@ -70,7 +70,7 @@
 @media only screen and (max-width: 750px) {
 
     .experienceTitle p {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 
 }
