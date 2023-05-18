@@ -2,10 +2,12 @@ import React, { FC } from 'react';
 import { AboutComponentInterface } from './interface';
 import { Box, Typography } from '@mui/material';
 import classes from './style.module.css';
+import { TitleComponent } from '../Title';
 
 export const AboutComponent: FC<AboutComponentInterface> = () => {
 
     return <Box className={classes.aboutSection}>
+        <TitleComponent title="About" />
         <Box className={classes.aboutImage}>
             <img src="https://media.licdn.com/dms/image/C5603AQHHnZsbq8dpug/profile-displayphoto-shrink_100_100/0/1645086082772?e=1686787200&v=beta&t=tSBT6uhqnwvZAOCy4Me9Ddn9R9dgoClOe-jruD4Bv3Q" alt="Logo" />
         </Box>

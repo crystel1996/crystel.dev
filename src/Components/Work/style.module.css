@@ -4,18 +4,6 @@
     padding: 5px;
 }
 
-.workTitle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    color: #682333;
-}
-
-.workTitle p {
-    font-size: 3em;
-}
-
 .listWork {
     display: flex;
     flex-direction: row;

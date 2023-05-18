@@ -4,6 +4,7 @@ import { Box, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mu
 import classes from './style.module.css';
 import { TaskAlt } from '@mui/icons-material';
 import { Gallery, GalleryItem } from '../Gallery';
+import { TitleComponent } from '../Title';
 
 const LIST_GALLERIES: GalleryItem[] = [
     { src: "/Assets/css3.svg", alt: "Css3" },
@@ -20,9 +21,7 @@ const LIST_GALLERIES: GalleryItem[] = [
 export const Experience: FC<ExperienceComponentInterface> = () => {
 
     return <Box className={classes.experienceContent}>
-        <Box className={classes.experienceTitle}>
-            <Typography>List of technologies</Typography>
-        </Box>
+        <TitleComponent title="Professional Experience" />
         <Gallery 
             classGalleryContent={classes.experiecenceListTechno} 
             classGalleryItem={classes.experienceLogo}  
