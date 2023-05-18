@@ -44,17 +44,17 @@
     padding: 5px;
 }
 
-.landingButton button  {
+.landingButton a {
     color: #F2F2F2;
-    background-color: #1f444d;
+    background-color: #682333;
     padding: 25px 15px;
     min-width: 250px;
     border: none;
 }
 
-.landingButton button:hover {
+.landingButton a:hover {
     color: #F2F2F2;
-    background-color: #1f444d;
+    background-color: #38131c;
     border: none;
 }
 
