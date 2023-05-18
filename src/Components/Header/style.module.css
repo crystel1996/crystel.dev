@@ -35,7 +35,7 @@
     min-width: max-content;
 }
 
-.headerListMenuButton:hover {
+.headerListMenuButton:hover, .headerListMenuButtonActive {
     background: #F2F2F2;
     color: #2a6877;
     text-decoration: none;

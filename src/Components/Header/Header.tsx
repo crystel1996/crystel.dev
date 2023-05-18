@@ -54,7 +54,7 @@ export const Header: FC<HeaderComponentInterface> = () => {
         { onClick: handleRedirect, label: 'Experiences', redirect: 'experiences', classNameItem: classnames(classes.headerListMenuitem, isActive('experiences') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
         { onClick: handleRedirect, label: 'Work', redirect: 'work', classNameItem: classnames(classes.headerListMenuitem, isActive('work') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
         { onClick: handleRedirect, label: 'Contact', redirect: 'contact', classNameItem: classnames(classes.headerListMenuitem, isActive('contact') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
-        { onClick: handleRedirect, label: 'Download CV', redirect: 'download', classNameItem: classNames(classes.headerListMenuitem, classes.headerListMenuButton), classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Download CV', redirect: 'download', classNameItem: classNames(classes.headerListMenuitem, classes.headerListMenuButton, isActive('download') ? classes.headerListMenuButtonActive : null), classNameItemText: classes.headerListMenuitemText },
     ];
 
     const MENU_MOBILE: MenuItemComponentInterface[] = [
@@ -63,7 +63,7 @@ export const Header: FC<HeaderComponentInterface> = () => {
         { onClick: handleRedirect, label: 'Experiences', redirect: 'experiences', classNameItem: classnames(classes.headerListMenuitem, isActive('experiences') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
         { onClick: handleRedirect, label: 'Work', redirect: 'work', classNameItem: classnames(classes.headerListMenuitem, isActive('work') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
         { onClick: handleRedirect, label: 'Contact', redirect: 'contact', classNameItem: classnames(classes.headerListMenuitem, isActive('contact') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
-        { onClick: handleRedirect, label: 'Download CV', redirect: 'download', classNameItem: classNames(classes.headerListMenuitem, classes.headerListMenuButton), classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Download CV', redirect: 'download', classNameItem: classNames(classes.headerListMenuitem, classes.headerListMenuButton, isActive('download') ? classes.headerListMenuButtonActive : null), classNameItemText: classes.headerListMenuitemText },
     ];
 
     const LIST_MENU = React.useMemo(() => {
