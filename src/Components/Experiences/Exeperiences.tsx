@@ -21,13 +21,16 @@ export const Experience: FC<ExperienceComponentInterface> = () => {
 
     return <Box className={classes.experienceContent}>
         <Box className={classes.experienceTitle}>
-            <Typography>List of technologies</Typography>
+            <Typography>Technologies</Typography>
         </Box>
         <Gallery 
             classGalleryContent={classes.experiecenceListTechno} 
             classGalleryItem={classes.experienceLogo}  
             listGalleries={LIST_GALLERIES}
         />
+        <Box className={classes.experienceTitle}>
+            <Typography>Professional experience</Typography>
+        </Box>
         <Box className={classes.listExperiences}>
             <Box className={classes.experiencesItem}>
                 <Box className={classes.experiencesTitle}>

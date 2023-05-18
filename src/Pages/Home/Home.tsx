@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { HomePageInterface } from './interface';
-import { Header, Landing } from '../../Components';
+import { AboutComponent, Experience, Header, Landing, WorkComponent } from '../../Components';
 import { Box } from '@mui/material';
 import classes from './style.module.css';
 
@@ -9,5 +9,8 @@ export const HomePage: FC<HomePageInterface> = () => {
     
         <Header />
         <Landing />
+        <AboutComponent />
+        <Experience />
+        <WorkComponent />
     </Box>
 }

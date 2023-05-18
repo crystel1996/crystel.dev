@@ -6,6 +6,9 @@ import classes from './style.module.css';
 export const AboutComponent: FC<AboutComponentInterface> = () => {
 
     return <Box className={classes.aboutSection}>
+        <Box className={classes.aboutTitle}>
+            <Typography>About</Typography>
+        </Box>
         <Box className={classes.aboutImage}>
             <img src="https://media.licdn.com/dms/image/C5603AQHHnZsbq8dpug/profile-displayphoto-shrink_100_100/0/1645086082772?e=1686787200&v=beta&t=tSBT6uhqnwvZAOCy4Me9Ddn9R9dgoClOe-jruD4Bv3Q" alt="Logo" />
         </Box>

@@ -32,6 +32,7 @@ export const Header: FC<HeaderComponentInterface> = () => {
     };
 
     const MENUS: MenuItemComponentInterface[] = [
+        { onClick: handleRedirect, label: 'Home', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
         { onClick: handleRedirect, label: 'About', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
         { onClick: handleRedirect, label: 'Experiences', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
         { onClick: handleRedirect, label: 'Work', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
@@ -40,6 +41,7 @@ export const Header: FC<HeaderComponentInterface> = () => {
     ];
 
     const MENU_MOBILE: MenuItemComponentInterface[] = [
+        { onClick: handleRedirect, label: 'Home', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
         { onClick: handleRedirect, label: 'About', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
         { onClick: handleRedirect, label: 'Experiences', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
         { onClick: handleRedirect, label: 'Work', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },

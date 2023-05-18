@@ -7,7 +7,7 @@ export const WorkComponent: FC<WorkComponentInterface> = () => {
 
     return <Box className={classes.workContent}>
         <Box className={classes.workTitle}>
-            <Typography>List of My Work</Typography>
+            <Typography>Personal Projects</Typography>
         </Box>
         <Box className={classes.listWork}>
             <Box className={classes.workItem}>
