@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { PDFViewerComponentInterface } from './interface';
-import { Viewer, Worker } from '@react-pdf-viewer/core';
+import { Viewer, Worker, SpecialZoomLevel } from '@react-pdf-viewer/core';
 import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
 import classes from './style.module.css';
 
@@ -22,15 +22,11 @@ export const PDFViewer: FC<PDFViewerComponentInterface> = () => {
 
                         className={classes.cv}
 
-                        style={{
-                            width: '900px',
-                            marginLeft: 'auto',
-                            marginRight: 'auto',
-                        }}
                     >
                         <Viewer
                             fileUrl={`/Assets/Developer-(ReactJS -  NodeJS)-Crystel.pdf`}
                             plugins={[defaultLayoutPluginInstance]}
+                            defaultScale={SpecialZoomLevel.PageFit}
                         />
                     </Box>
                 </Worker>

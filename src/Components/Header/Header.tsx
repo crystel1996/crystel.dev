@@ -37,7 +37,7 @@ export const Header: FC<HeaderComponentInterface> = () => {
         { onClick: handleRedirect, label: 'Experiences', redirect: 'experiences', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
         { onClick: handleRedirect, label: 'Work', redirect: 'work', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
         { onClick: handleRedirect, label: 'Contact', redirect: 'contact', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Download CV', isLink: true, redirect: 'download', classNameItem: classNames(classes.headerListMenuitem, classes.headerListMenuButton), classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Download CV', redirect: 'download', classNameItem: classNames(classes.headerListMenuitem, classes.headerListMenuButton), classNameItemText: classes.headerListMenuitemText },
     ];
 
     const MENU_MOBILE: MenuItemComponentInterface[] = [
@@ -46,7 +46,7 @@ export const Header: FC<HeaderComponentInterface> = () => {
         { onClick: handleRedirect, label: 'Experiences', redirect: 'experiences', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
         { onClick: handleRedirect, label: 'Work', redirect: 'work', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
         { onClick: handleRedirect, label: 'Contact', redirect: 'contact', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Download CV', isLink: true, redirect: 'download', classNameItem: classNames(classes.headerListMenuitem, classes.headerListMenuButton), classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Download CV', redirect: 'download', classNameItem: classNames(classes.headerListMenuitem, classes.headerListMenuButton), classNameItemText: classes.headerListMenuitemText },
     ];
 
     const LIST_MENU = React.useMemo(() => {
