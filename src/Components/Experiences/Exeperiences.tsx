@@ -31,27 +31,27 @@ export const Experience: FC<ExperienceComponentInterface> = () => {
             <Box className={classes.experiencesItem}>
                 <Box className={classes.experiencesTitle}>
                     <Typography variant="h4">Developer ReactJS / NodeJS</Typography>
-                    <Typography display="flex"><Typography className={classes.experiencesLibelle}>Date:</Typography> December 2020 - Now</Typography>
-                    <Typography display="flex"><Typography className={classes.experiencesLibelle}>Company:</Typography> Digital4Win</Typography>
-                    <Typography display="flex"><Typography className={classes.experiencesLibelle}>Techno:</Typography> ReactJS, NodeJS, NestJs, Graphql, Git, Postgresql, js, css3</Typography>
+                    <Typography className={classes.experiencesLibelle}>Date:<Typography component="span">December 2020 - Now</Typography></Typography>
+                    <Typography className={classes.experiencesLibelle}>Company:<Typography component="span"> Digital4Win</Typography></Typography>
+                    <Typography className={classes.experiencesLibelle}>Techno:<Typography component="span">ReactJS, NodeJS, NestJs, Graphql, Git, Postgresql, js, css3</Typography></Typography>
                 </Box>
                 <Box>
                     <List>
                         <ListItem>
                             <ListItemIcon>
-                                <TaskAlt color="success" />
+                                <TaskAlt htmlColor="#17e821" />
                             </ListItemIcon>
                             <ListItemText>Creation of apis for managing customer and supplier relations</ListItemText>
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
-                                <TaskAlt color="success" />
+                                <TaskAlt htmlColor="#17e821" />
                             </ListItemIcon>
                             <ListItemText>Creation of apis for managing customer appointments</ListItemText>
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
-                                <TaskAlt color="success" />
+                                <TaskAlt htmlColor="#17e821" />
                             </ListItemIcon>
                             <ListItemText>Creation of user interfaces </ListItemText>
                         </ListItem>
@@ -61,15 +61,15 @@ export const Experience: FC<ExperienceComponentInterface> = () => {
             <Box className={classes.experiencesItem}>
                 <Box className={classes.experiencesTitle}>
                     <Typography variant="h4">Developer PHP</Typography>
-                    <Typography display="flex"><Typography className={classes.experiencesLibelle}>Date:</Typography> December 2019 - Mars 2020</Typography>
-                    <Typography display="flex"><Typography className={classes.experiencesLibelle}>Company:</Typography> Nir'Info</Typography>
-                    <Typography display="flex"><Typography className={classes.experiencesLibelle}>Techno:</Typography> PHP, MySql, HTML/Css, Js</Typography>
+                    <Typography className={classes.experiencesLibelle}>Date:<Typography component="span">December 2019 - Mars 2020</Typography> </Typography>
+                    <Typography className={classes.experiencesLibelle}>Company:<Typography component="span">Nir'Info</Typography></Typography>
+                    <Typography className={classes.experiencesLibelle}>Techno:<Typography component="span"> PHP, MySql, HTML/Css, Js</Typography></Typography>
                 </Box>
                 <Box>
                     <List>
                         <ListItem>
                             <ListItemIcon>
-                                <TaskAlt color="success" />
+                                <TaskAlt htmlColor="#17e821" />
                             </ListItemIcon>
                             <ListItemText>
                                 Creation of apis to manage a school establishment
@@ -77,7 +77,7 @@ export const Experience: FC<ExperienceComponentInterface> = () => {
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
-                                <TaskAlt color="success" />
+                                <TaskAlt htmlColor="#17e821" />
                             </ListItemIcon>
                             <ListItemText>
                                 Creation of user interfaces for schools
@@ -85,7 +85,7 @@ export const Experience: FC<ExperienceComponentInterface> = () => {
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
-                                <TaskAlt color="success" />
+                                <TaskAlt htmlColor="#17e821" />
                             </ListItemIcon>
                             <ListItemText>
                                 Creation of user interfaces for a hotel showcase site
