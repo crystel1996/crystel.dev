@@ -42,6 +42,7 @@
 
 .contactSatisfying p {
     font-size: 1.8em;
+    text-align: justify;
 }
 
 .contactCollaborateLink a {
@@ -56,4 +57,25 @@
     color: #F2F2F2;
     background-color: #38131c;
     border: none;
+}
+
+
+@media only screen and (max-width: 992px) {
+
+    .contactBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactItem {
+        padding: 0;
+    }
+
+    .contactItem:last-child {
+        max-width: 100%;
+        margin: 0 15px;
+    }
+
 }
