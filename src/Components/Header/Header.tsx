@@ -32,21 +32,21 @@ export const Header: FC<HeaderComponentInterface> = () => {
     };
 
     const MENUS: MenuItemComponentInterface[] = [
-        { onClick: handleRedirect, label: 'Home', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'About', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Experiences', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Work', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Contact', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Download CV', classNameItem: classNames(classes.headerListMenuitem, classes.headerListMenuButton), classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Home', redirect:'home', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'About', redirect: 'about', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Experiences', redirect: 'experiences', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Work', redirect: 'work', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Contact', redirect: 'contact', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Download CV', redirect: 'download', classNameItem: classNames(classes.headerListMenuitem, classes.headerListMenuButton), classNameItemText: classes.headerListMenuitemText },
     ];
 
     const MENU_MOBILE: MenuItemComponentInterface[] = [
-        { onClick: handleRedirect, label: 'Home', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'About', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Experiences', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Work', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Contact', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Download CV', classNameItem: classNames(classes.headerListMenuitem, classes.headerListMenuButton), classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Home', redirect: 'home', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'About', redirect: 'about', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Experiences', redirect: 'experiences', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Work', redirect: 'work', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Contact', redirect: 'contact', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Download CV', redirect: 'download', classNameItem: classNames(classes.headerListMenuitem, classes.headerListMenuButton), classNameItemText: classes.headerListMenuitemText },
     ];
 
     const LIST_MENU = React.useMemo(() => {
@@ -70,8 +70,15 @@ export const Header: FC<HeaderComponentInterface> = () => {
                                 </Box>
                             </Box>
                             {
-                                MENUS.map((menu) => {
-                                    return <MenuItem onClick={menu.onClick} label={menu.label} classNameItem={menu.classNameItem} classNameItemText={menu.classNameItemText} />
+                                MENUS.map((menu, index) => {
+                                    return <MenuItem 
+                                            key={`${menu}_${index}`}
+                                            redirect={menu.redirect}
+                                            onClick={menu.onClick} 
+                                            label={menu.label} 
+                                            classNameItem={menu.classNameItem} 
+                                            classNameItemText={menu.classNameItemText} 
+                                    />
                                 })
                             }
                         </Drawer>
@@ -79,8 +86,8 @@ export const Header: FC<HeaderComponentInterface> = () => {
         }
 
         return  <List className={classes.headerListMenu}>
-                    {MENUS.map((menu) => {
-                        return <MenuItem key={menu.label} onClick={menu.onClick} label={menu.label} classNameItem={menu.classNameItem} classNameItemText={menu.classNameItemText} />
+                    {MENUS.map((menu, index) => {
+                        return <MenuItem key={`${menu}_${index}`} redirect={menu.redirect} onClick={menu.onClick} label={menu.label} classNameItem={menu.classNameItem} classNameItemText={menu.classNameItemText} />
                     })}
                 </List>
 

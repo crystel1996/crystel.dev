@@ -3,4 +3,5 @@ export interface MenuItemComponentInterface {
     classNameItemText?: string;
     label: string;
     onClick: (go: string) => void;
+    redirect: string;
 }
