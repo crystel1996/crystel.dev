@@ -78,7 +78,7 @@ export const Header: FC<HeaderComponentInterface> = () => {
 
         return  <List className={classes.headerListMenu}>
                     {MENUS.map((menu) => {
-                        return <MenuItem onClick={menu.onClick} label={menu.label} classNameItem={menu.classNameItem} classNameItemText={menu.classNameItemText} />
+                        return <MenuItem key={menu.label} onClick={menu.onClick} label={menu.label} classNameItem={menu.classNameItem} classNameItemText={menu.classNameItemText} />
                     })}
                 </List>
 
