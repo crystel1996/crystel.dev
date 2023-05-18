@@ -8,9 +8,9 @@ export const HomePage: FC<HomePageInterface> = () => {
     return <Box className={classes.home}>
     
         <Header />
-        <Box className={classes.section}>
+        
             <Landing />
-        </Box>
+     
         <Box className={classes.section}>
             <AboutComponent />
         </Box>

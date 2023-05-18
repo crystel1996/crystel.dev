@@ -1,9 +1,9 @@
 .home {
     background: #2a6877;
-    height: 100vh;
+    /* height: 100vh; */
     overflow-x: hidden;
 }
 
 .section {
-    height: 100vh;
+    min-height: 100vh;
 }

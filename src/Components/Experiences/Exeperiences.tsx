@@ -21,13 +21,12 @@ const LIST_GALLERIES: GalleryItem[] = [
 export const Experience: FC<ExperienceComponentInterface> = () => {
 
     return <Box className={classes.experienceContent}>
-        <TitleComponent title="Technologies" />
+        <TitleComponent title="Professional Experience" />
         <Gallery 
             classGalleryContent={classes.experiecenceListTechno} 
             classGalleryItem={classes.experienceLogo}  
             listGalleries={LIST_GALLERIES}
         />
-        <TitleComponent title="Professional Experience" />
         <Box className={classes.listExperiences}>
             <Box className={classes.experiencesItem}>
                 <Box className={classes.experiencesTitle}>
