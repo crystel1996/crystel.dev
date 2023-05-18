@@ -1,7 +1,7 @@
 .home {
     background: #2a6877;
     overflow-x: hidden;
-    overflow-y: hidden;
+    height: 100vh;
 }
 
 .cvContent {
