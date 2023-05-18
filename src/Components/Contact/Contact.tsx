@@ -17,19 +17,25 @@ export const ContactComponent: FC<ContactComponentInterface> = (props) => {
                             <ListItemIcon>
                                 <WhatsApp htmlColor='#42cba5' />
                             </ListItemIcon>
-                            <ListItemText>+261 32 73 074 49</ListItemText>
+                            <ListItemText>
+                                <Typography component="a" href="tel:+261327307449">+261 32 73 074 49</Typography>
+                            </ListItemText>
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
                                 <LinkedIn htmlColor='#70b5f9' />
                             </ListItemIcon>
-                            <ListItemText>Crystel Ratsimbazafy</ListItemText>
+                            <ListItemText>
+                                <Typography target="_blank" component="a" href="https://www.linkedin.com/in/crystel-ratsimbazafy-996a5417a/">Crystel Ratsimbazafy</Typography>
+                            </ListItemText>
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
                                 <GitHub htmlColor='#161b22' />
                             </ListItemIcon>
-                            <ListItemText>crystel1996</ListItemText>
+                            <ListItemText>
+                                <Typography target="_blank" component="a" href="https://github.com/crystel1996">crystel1996</Typography>
+                            </ListItemText>
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
