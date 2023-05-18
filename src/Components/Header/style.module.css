@@ -24,8 +24,9 @@
     min-width: max-content;
 }
 
-.headerListMenuitem:hover {
-    text-decoration: underline;
+.headerListMenuitem:hover, .headerListMenuitemTextActive {
+    padding-bottom: 5px;
+    border-bottom: 5px solid #F2F2F2;
 }
 
 .headerListMenuButton {

@@ -12,7 +12,7 @@ export const MenuItem: FC<MenuItemComponentInterface> = (props) => {
 
     return  <ListItem className={props.classNameItem} onClick={handleClick}>
 
-                {props.isLink && <Typography component="a" href={props.redirect} target="_blank">{props.label}</Typography>}
+                {props.isLink && <Typography className={props.classNameItemText} component="a" href={props.redirect} target="_blank">{props.label}</Typography>}
 
                 {!props.isLink && <ListItemText className={props.classNameItemText} >{props.label}</ListItemText>}
             </ListItem>

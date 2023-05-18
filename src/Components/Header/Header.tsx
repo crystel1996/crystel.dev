@@ -7,10 +7,16 @@ import classNames from 'classnames';
 import { useNavigate } from 'react-router-dom';
 import { MenuItem, MenuItemComponentInterface } from '../MenuList';
 import { useMobileDevice } from '../../Hooks';
+import classnames from 'classnames';
 
 export const Header: FC<HeaderComponentInterface> = () => {
 
     const navigate = useNavigate();
+    
+    const path = window.location.pathname.split('/')[1];
+
+    console.log('[HISTORY]', window.location, path)
+
     const isMobileDevice = useMobileDevice();
 
     const [anchorElMenuMobile, setAnchorElMenuMobile] = useState<boolean>(false);
@@ -31,21 +37,32 @@ export const Header: FC<HeaderComponentInterface> = () => {
         navigate('/')
     };
 
+    const isActive = (tab: string) => {
+
+        if (tab === 'home') {
+            if (!path) {
+                return true;
+            }
+        }
+
+        return path === tab;
+    };
+
     const MENUS: MenuItemComponentInterface[] = [
-        { onClick: handleRedirect, label: 'Home', redirect:'home', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'About', redirect: 'about', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Experiences', redirect: 'experiences', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Work', redirect: 'work', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Contact', redirect: 'contact', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Home', redirect:'home', classNameItem: classnames(classes.headerListMenuitem, isActive('home') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
+        { onClick: handleRedirect, label: 'About', redirect: 'about', classNameItem: classnames(classes.headerListMenuitem, isActive('about') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
+        { onClick: handleRedirect, label: 'Experiences', redirect: 'experiences', classNameItem: classnames(classes.headerListMenuitem, isActive('experiences') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
+        { onClick: handleRedirect, label: 'Work', redirect: 'work', classNameItem: classnames(classes.headerListMenuitem, isActive('work') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
+        { onClick: handleRedirect, label: 'Contact', redirect: 'contact', classNameItem: classnames(classes.headerListMenuitem, isActive('contact') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
         { onClick: handleRedirect, label: 'Download CV', redirect: 'download', classNameItem: classNames(classes.headerListMenuitem, classes.headerListMenuButton), classNameItemText: classes.headerListMenuitemText },
     ];
 
     const MENU_MOBILE: MenuItemComponentInterface[] = [
-        { onClick: handleRedirect, label: 'Home', redirect: 'home', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'About', redirect: 'about', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Experiences', redirect: 'experiences', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Work', redirect: 'work', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
-        { onClick: handleRedirect, label: 'Contact', redirect: 'contact', classNameItem: classes.headerListMenuitem, classNameItemText: classes.headerListMenuitemText },
+        { onClick: handleRedirect, label: 'Home', redirect: 'home', classNameItem: classnames(classes.headerListMenuitem, isActive('home') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
+        { onClick: handleRedirect, label: 'About', redirect: 'about', classNameItem: classnames(classes.headerListMenuitem, isActive('about') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
+        { onClick: handleRedirect, label: 'Experiences', redirect: 'experiences', classNameItem: classnames(classes.headerListMenuitem, isActive('experiences') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
+        { onClick: handleRedirect, label: 'Work', redirect: 'work', classNameItem: classnames(classes.headerListMenuitem, isActive('work') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
+        { onClick: handleRedirect, label: 'Contact', redirect: 'contact', classNameItem: classnames(classes.headerListMenuitem, isActive('contact') ? classes.headerListMenuitemTextActive : null), classNameItemText: classnames(classes.headerListMenuitemText) },
         { onClick: handleRedirect, label: 'Download CV', redirect: 'download', classNameItem: classNames(classes.headerListMenuitem, classes.headerListMenuButton), classNameItemText: classes.headerListMenuitemText },
     ];
 
@@ -71,6 +88,7 @@ export const Header: FC<HeaderComponentInterface> = () => {
                             </Box>
                             {
                                 MENUS.map((menu, index) => {
+
                                     return <MenuItem 
                                             key={`${menu}_${index}`}
                                             isLink={menu.isLink}
