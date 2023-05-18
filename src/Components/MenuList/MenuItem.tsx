@@ -7,7 +7,7 @@ export const MenuItem: FC<MenuItemComponentInterface> = (props) => {
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
         event.stopPropagation();
-        props.onClick(props.label);
+        props.onClick(props.redirect ?? props.label);
     };
 
     return  <ListItem className={props.classNameItem} onClick={handleClick}>
