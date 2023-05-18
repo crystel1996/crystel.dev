@@ -3,6 +3,7 @@ import { HomePageInterface } from './interface';
 import { AboutComponent, ContactComponent, Experience, Header, Landing, WorkComponent } from '../../Components';
 import { Box } from '@mui/material';
 import classes from './style.module.css';
+import classnames from 'classnames';
 
 export const HomePage: FC<HomePageInterface> = () => {
     return <Box className={classes.home}>
@@ -11,16 +12,16 @@ export const HomePage: FC<HomePageInterface> = () => {
         
             <Landing />
      
-        <Box className={classes.section}>
+        <Box className={classnames(classes.section, classes.aboutSection)}>
             <AboutComponent />
         </Box>
         <Box className={classes.section}>
             <Experience />
         </Box>
-        <Box className={classes.section}>
+        <Box className={classnames(classes.section, classes.workSection)}>
             <WorkComponent />
         </Box>
-        <Box className={classes.section}>
+        <Box className={classnames(classes.section, classes.contactSection)}>
             <ContactComponent />
         </Box>
     </Box>

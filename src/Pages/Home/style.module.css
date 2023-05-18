@@ -7,3 +7,15 @@
 .section {
     min-height: 100vh;
 }
+
+.aboutSection {
+    background: #0d1117;
+}
+
+.workSection {
+    background: #F2F2F2;
+}
+
+.contactSection {
+    background: #0d1117;
+}
