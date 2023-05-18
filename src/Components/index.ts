@@ -7,3 +7,4 @@ export * from './Gallery';
 export * from './Title';
 export * from './PDFViewer';
 export * from './Contact';
+export * from './Footer';

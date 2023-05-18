@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { HomePageInterface } from './interface';
-import { AboutComponent, ContactComponent, Experience, Header, Landing, WorkComponent } from '../../Components';
+import { AboutComponent, ContactComponent, Experience, FooterComponent, Header, Landing, WorkComponent } from '../../Components';
 import { Box } from '@mui/material';
 import classes from './style.module.css';
 import classnames from 'classnames';
@@ -23,6 +23,9 @@ export const HomePage: FC<HomePageInterface> = () => {
         </Box>
         <Box className={classnames(classes.section, classes.contactSection)}>
             <ContactComponent />
+        </Box>
+        <Box className={classnames(classes.footerSection)}>
+            <FooterComponent />
         </Box>
     </Box>
 }

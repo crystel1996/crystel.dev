@@ -31,7 +31,7 @@ export const ContactComponent: FC<ContactComponentInterface> = (props) => {
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
-                                <GitHub htmlColor='#161b22' />
+                                <GitHub htmlColor='#485568' />
                             </ListItemIcon>
                             <ListItemText>
                                 <Typography target="_blank" component="a" href="https://github.com/crystel1996">crystel1996</Typography>

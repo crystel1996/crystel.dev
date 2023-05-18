@@ -10,7 +10,7 @@ export const AboutPage: FC<AboutPageInterface> = () => {
     
         <Header />
         <AboutComponent />
-    
+
     </Box>
 
 }
