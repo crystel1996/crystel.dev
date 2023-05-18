@@ -17,7 +17,7 @@
 .contactItem h4 {
  
     text-align: center;
-    font-size: 2.5em;
+    font-size: 1.8em;
 }
 
 .contactItem span, .contactItem a {
@@ -41,8 +41,12 @@
 }
 
 .contactSatisfying p {
-    font-size: 1.8em;
+    font-size: 1.3em;
     text-align: justify;
+}
+
+.contactCollaborateLink {
+    margin: auto
 }
 
 .contactCollaborateLink a {
@@ -70,12 +74,17 @@
     }
 
     .contactItem {
-        padding: 0;
+        padding: 5px;
     }
 
     .contactItem:last-child {
         max-width: 100%;
         margin: 0 15px;
+    }
+
+    .contactItem h4 {
+ 
+        display: none;
     }
 
 }
