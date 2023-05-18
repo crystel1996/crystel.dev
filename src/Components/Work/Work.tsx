@@ -2,13 +2,12 @@ import React, { FC } from 'react';
 import { WorkComponentInterface } from './interface';
 import classes from './style.module.css'
 import { Box, Typography } from '@mui/material';
+import { TitleComponent } from '../Title';
 
 export const WorkComponent: FC<WorkComponentInterface> = () => {
 
     return <Box className={classes.workContent}>
-        <Box className={classes.workTitle}>
-            <Typography>Personal Projects</Typography>
-        </Box>
+        <TitleComponent title="Personal Projects" />
         <Box className={classes.listWork}>
             <Box className={classes.workItem}>
                 <Box className={classes.workImage}>

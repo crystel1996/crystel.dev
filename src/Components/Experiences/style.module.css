@@ -4,18 +4,6 @@
     padding: 5px;
 }
 
-.experienceTitle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    color: #682333;
-}
-
-.experienceTitle p {
-    font-size: 3em;
-}
-
 .experiecenceListTechno {
     display: flex;
     flex-direction: row;
