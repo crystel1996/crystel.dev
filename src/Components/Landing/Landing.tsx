@@ -17,7 +17,7 @@ export const Landing: FC<LandingComponentInterface> = () => {
                 <Typography>I am a web developer who uses javascript with the React / NodeJs.</Typography>
             </Box>
             <Box className={classes.landingButton}>
-                <Button size="large" variant='outlined' color="primary">Contact Me</Button>
+                <Button size="large" LinkComponent="a" href="mailto:crystelratsimbazafy@gmail.com" variant='outlined'>Contact Me</Button>
             </Box>
         </Box>
     </Box>
