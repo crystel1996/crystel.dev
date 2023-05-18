@@ -3,6 +3,19 @@ import { ExperienceComponentInterface } from './interface';
 import { Box, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
 import classes from './style.module.css';
 import { TaskAlt } from '@mui/icons-material';
+import { Gallery, GalleryItem } from '../Gallery';
+
+const LIST_GALLERIES: GalleryItem[] = [
+    { src: "/Assets/css3.svg", alt: "Css3" },
+    { src: "/Assets/git.svg", alt: "Git" },
+    { src: "/Assets/graphql.svg", alt: "Graphql" },
+    { src: "/Assets/html5.svg", alt: "HTML5" },
+    { src: "/Assets/js.svg", alt: "JS" },
+    { src: "/Assets/nestJS.svg", alt: "NestJS" },
+    { src: "/Assets/nodeJS.svg", alt: "Node JS" },
+    { src: "/Assets/postgresql.svg", alt: "PostgreSQL" },
+    { src: "/Assets/react.svg", alt: "React" }
+];
 
 export const Experience: FC<ExperienceComponentInterface> = () => {
 
@@ -10,35 +23,11 @@ export const Experience: FC<ExperienceComponentInterface> = () => {
         <Box className={classes.experienceTitle}>
             <Typography>List of technologies</Typography>
         </Box>
-        <Box className={classes.experiecenceListTechno}>
-            <Box className={classes.experienceLogo}>
-                <img src="/Assets/css3.svg" alt="Css3" />
-            </Box>
-            <Box className={classes.experienceLogo}>
-                <img src="/Assets/git.svg" alt="Git" />
-            </Box>
-            <Box className={classes.experienceLogo}>
-                <img src="/Assets/graphql.svg" alt="Css3" />
-            </Box>
-            <Box className={classes.experienceLogo}>
-                <img src="/Assets/html5.svg" alt="Css3" />
-            </Box>
-            <Box className={classes.experienceLogo}>
-                <img src="/Assets/js.svg" alt="Css3" />
-            </Box>
-            <Box className={classes.experienceLogo}>
-                <img src="/Assets/nestJS.svg" alt="Css3" />
-            </Box>
-            <Box className={classes.experienceLogo}>
-                <img src="/Assets/nodeJS.svg" alt="Css3" />
-            </Box>
-            <Box className={classes.experienceLogo}>
-                <img src="/Assets/postgresql.svg" alt="Css3" />
-            </Box>
-            <Box className={classes.experienceLogo}>
-                <img src="/Assets/react.svg" alt="Css3" />
-            </Box>
-        </Box>
+        <Gallery 
+            classGalleryContent={classes.experiecenceListTechno} 
+            classGalleryItem={classes.experienceLogo}  
+            listGalleries={LIST_GALLERIES}
+        />
         <Box className={classes.listExperiences}>
             <Box className={classes.experiencesItem}>
                 <Box className={classes.experiencesTitle}>
