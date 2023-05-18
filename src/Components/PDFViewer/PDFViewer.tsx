@@ -1,46 +1,41 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import { PDFViewerComponentInterface } from './interface';
-import saveAs from 'file-saver';
-import { Document, Page, pdfjs } from 'react-pdf';
-import { useNavigate } from 'react-router-dom'; 
+import { Viewer, Worker } from '@react-pdf-viewer/core';
+import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
+import classes from './style.module.css';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+import '@react-pdf-viewer/core/lib/styles/index.css';
+import '@react-pdf-viewer/default-layout/lib/styles/index.css';
+import { Box } from '@mui/material';
+import { Header } from '../Header';
 
 export const PDFViewer: FC<PDFViewerComponentInterface> = () => {
 
-    const navigate = useNavigate();
-
-    const pdfFilePath = "/Assets/cv.pdf";
-
-    const [numPages, setNumPages] = useState<number | null>(null);
-    const [pageNumber, setPageNumber] = useState<number>(1);
-
-    const loadPDF = async () => {
-        try {
-            const response = await fetch(pdfFilePath);
-            const blob = await response.blob();
-            console.log('[DOWNLOAD]')
-            saveAs(blob, 'Developer (ReactJS / NodeJS) Crystel.pdf');
-            navigate(-1);
-        } catch (error) {
-            console.error('Failed to download the PDF:', error);
-        }
-    };
-
-    const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
-        loadPDF();
-    };
+    const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
     return (
-        <div>
-            <Document file={pdfFilePath} onLoadSuccess={onDocumentLoadSuccess} externalLinkTarget='_blank'>
-                <Page pageNumber={pageNumber} />
-            </Document>
+        <Box className={classes.home}>
+            <Header />
+            <Box className={classes.cvContent}>
+                <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.6.172/build/pdf.worker.js">
+                    <Box
 
-            <p>
-                Page {pageNumber} of {numPages}
-            </p>
-        </div>
+                        className={classes.cv}
+
+                        style={{
+                            width: '900px',
+                            marginLeft: 'auto',
+                            marginRight: 'auto',
+                        }}
+                    >
+                        <Viewer
+                            fileUrl={`/Assets/Developer-(ReactJS -  NodeJS)-Crystel.pdf`}
+                            plugins={[defaultLayoutPluginInstance]}
+                        />
+                    </Box>
+                </Worker>
+            </Box>
+        </Box>
     );
 
 }

@@ -1,4 +1,4 @@
-import { ListItem, ListItemText } from '@mui/material';
+import { ListItem, ListItemText, Typography } from '@mui/material';
 import React, { FC } from 'react';
 import { MenuItemComponentInterface } from './interface';
 
@@ -11,7 +11,10 @@ export const MenuItem: FC<MenuItemComponentInterface> = (props) => {
     };
 
     return  <ListItem className={props.classNameItem} onClick={handleClick}>
-                <ListItemText className={props.classNameItemText} >{props.label}</ListItemText>
+
+                {props.isLink && <Typography component="a" href={props.redirect} target="_blank">{props.label}</Typography>}
+
+                {!props.isLink && <ListItemText className={props.classNameItemText} >{props.label}</ListItemText>}
             </ListItem>
 
 }
